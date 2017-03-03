@@ -4,24 +4,24 @@ Stanovené termíny a pridelenie úloh:
 //-- Do 12.03.2017 --//
 - Prvá polovica testov pre matematickú knižnicu - Každý
 - Mockup pre rozšírenú a normálnu kalkulačku - Každý
-- Pridanie licencie na GitHub - Edo
-- Integrovanie testovača na GitHub - Edo
+- Pridanie licencie na GitHub - xcubae00
+- Integrovanie testovača na GitHub - xcubae00
 
 //-- Do 19.03.2017 --//
 - Druhá polovica testov pre matematickú knižnicu - Každý
-- (Od)Inštalátor programu - Martin
-- Užívatelska príručka - Martin
-- Implementovanie základných operácií +, -, *, /, !, a^x, obecná odmocnina - Ondrej
+- (Od)Inštalátor programu - xbazik00
+- Užívatelska príručka - xbazik00
+- Implementovanie základných operácií +, -, *, /, !, a^x, obecná odmocnina - xkurak00
 
 //-- Do 26.03.2017 --//
-- Implementácia UI podla mockupu - Robo
-- Implementovanie rátania zátvoriek - Robo
+- Implementácia UI podla mockupu - xkolcu00
+- Implementovanie rátania zátvoriek - xkolcu00
 
 //-- Do 01.04.2017 --//
-- Snímok debugger-u - Martin
-- Implementovanie rátanie sústavy lineárnych rovníc - Ondrej
-- Profilling - smerodajná odchylka - Ondrej
-- Makefile - Edo
+- Snímok debugger-u - xbazik00
+- Implementovanie rátanie sústavy lineárnych rovníc - xkurak00
+- Profilling - smerodajná odchylka - xkurak00
+- Makefile - xcubae00
 
 Komunikačné kanály:
 - Messenger, Facebook, Telegram, GitHub
