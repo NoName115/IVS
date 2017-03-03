@@ -1,0 +1,31 @@
+Plán práce
+
+Stanovené termíny a pridelenie úloh:
+//-- Do 12.03.2017 --//
+- Prvá polovica testov pre matematickú knižnicu - Každý
+- Mockup pre rozšírenú a normálnu kalkulačku - Každý
+- Pridanie licencie na GitHub - Edo
+- Integrovanie testovača na GitHub - Edo
+
+//-- Do 19.03.2017 --//
+- Druhá polovica testov pre matematickú knižnicu - Každý
+- (Od)Inštalátor programu - Martin
+- Užívatelska príručka - Martin
+- Implementovanie základných operácií +, -, *, /, !, a^x, obecná odmocnina - Ondrej
+
+//-- Do 26.03.2017 --//
+- Implementácia UI podla mockupu - Robo
+- Implementovanie rátania zátvoriek - Robo
+
+//-- Do 01.04.2017 --//
+- Snímok debugger-u - Martin
+- Implementovanie rátanie sústavy lineárnych rovníc - Ondrej
+- Profilling - smerodajná odchylka - Ondrej
+- Makefile - Edo
+
+Komunikačné kanály:
+- Messenger, Facebook, Telegram, GitHub
+
+Verzovací systém:
+- GitHub - https://github.com/NoName115/IVS
+- Pre vyučujúcich bol pridaný collaborator - 'ivskontrola'
