@@ -12,4 +12,4 @@ Ubuntu 64bit
 
 ### Licence
 -----------
-Tento program je poskytovan...
+Tento program je poskytovaný pod [GNU GENERAL PUBLIC LICENSE](https://github.com/NoName115/IVS/blob/master/LICENSE).
