@@ -1,0 +1,12 @@
+box: edynox/python
+
+build:
+  steps:
+    - script:
+        name: PEP8 check
+        code: |
+            pep8 .
+    - script:
+        name: Unit tests
+        code: |
+            python ./src/tester.py 
