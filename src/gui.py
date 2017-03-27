@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 import sys
-from PyQt5.QtWidgets import (QWidget, QGridLayout, 
-    QPushButton, QApplication)
+from PyQt5.QtWidgets import (QWidget, QGridLayout, QPushButton, QApplication)
 
 
 class Example(QWidget):
@@ -15,11 +14,13 @@ class Example(QWidget):
         grid = QGridLayout()
         self.setLayout(grid)
 
-        names = ['Cls', 'Bck', '', 'Close',
-                 '7', '8', '9', '/',
-                '4', '5', '6', '*',
-                 '1', '2', '3', '-',
-                '0', '.', '=', '+']
+        names = [
+            'Cls', 'Bck', '', 'Close',
+            '7', '8', '9', '/',
+            '4', '5', '6', '*',
+            '1', '2', '3', '-',
+            '0', '.', '=', '+'
+            ]
 
         positions = [(i,j) for i in range(5) for j in range(4)]
 
@@ -35,7 +36,6 @@ class Example(QWidget):
 
 
 if __name__ == '__main__':
-    
     app = QApplication(sys.argv)
     ex = Example()
     sys.exit(app.exec_())
