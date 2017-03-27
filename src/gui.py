@@ -22,7 +22,7 @@ class Example(QWidget):
             '0', '.', '=', '+'
             ]
 
-        positions = [(i,j) for i in range(5) for j in range(4)]
+        positions = [(i, j) for i in range(5) for j in range(4)]
 
         for position, name in zip(positions, names):
             if name == '':
