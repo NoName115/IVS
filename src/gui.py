@@ -791,6 +791,7 @@ class Ui_Form(QtWidgets.QWidget):
 
     def keyPressEvent(self, e):
         if (e.key() == Qt.Key_Backspace):
+            self.clearExpression = False
             self.removeOneCharacter()
 
         if (e.key() == Qt.Key_0):
@@ -823,6 +824,42 @@ class Ui_Form(QtWidgets.QWidget):
         elif (e.key() == Qt.Key_9):
             self.addTextToExpression("9")
 
+        elif (e.key() == Qt.Key_S):
+            self.addTextToExpression("s")
+
+        elif (e.key() == Qt.Key_I):
+            self.addTextToExpression("i")
+
+        elif (e.key() == Qt.Key_N):
+            self.addTextToExpression("n")
+
+        elif (e.key() == Qt.Key_A):
+            self.addTextToExpression("a")
+
+        elif (e.key() == Qt.Key_F):
+            self.addTextToExpression("f")
+
+        elif (e.key() == Qt.Key_C):
+            self.addTextToExpression("c")
+
+        elif (e.key() == Qt.Key_T):
+            self.addTextToExpression("t")
+
+        elif (e.key() == Qt.Key_B):
+            self.addTextToExpression("b")
+
+        elif (e.key() == Qt.Key_O):
+            self.addTextToExpression("o")
+
+        elif (e.key() == Qt.Key_G):
+            self.addTextToExpression("g")
+
+        elif (e.key() == Qt.Key_Q):
+            self.addTextToExpression("q")
+
+        elif (e.key() == Qt.Key_R):
+            self.addTextToExpression("r")
+
         elif (e.key() == Qt.Key_Plus):
             self.addTextToExpression("+")
 
@@ -840,6 +877,9 @@ class Ui_Form(QtWidgets.QWidget):
 
         elif (e.key() == Qt.Key_Enter or e.key() == Qt.Key_Return):
             self.solveExpression()
+
+        elif (e.key() == Qt.Key_Exclam):
+            self.addTextToExpression("fact(")
 
         elif (e.key() == Qt.Key_ParenLeft):
             self.addTextToExpression("(")
