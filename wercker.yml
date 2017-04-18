@@ -3,10 +3,18 @@ box: edynox/python
 build:
   steps:
     - script:
+        name: Compilation
+        code: |
+            make
+    - script:
         name: PEP8 check
         code: |
-            pep8 .
+            make pep
     - script:
         name: Unit tests
         code: |
-            python ./src/tester.py 
+            make test
+    - script:
+        name: Build documentation and pack project
+        code: |
+            make pack
