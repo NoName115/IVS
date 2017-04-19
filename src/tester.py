@@ -53,4 +53,5 @@ class mlib_test(unittest.TestCase):
         self.assertEqual(self.solver.solve('10 * (-5)'), -50)
         self.assertEqual(self.solver.solve('-10 * (-0)'), 0)
 
-unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
