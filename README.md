@@ -7,10 +7,10 @@ Ubuntu 64bit
 ### Autori
 ------------
 \#SsYoloSwag41
- - xkolcu00
- - xcubae00
- - xkurak00
- - xbazik00
+ - xkolcu00 Róbert Kolcún
+ - xcubae00 Eduard Čuba
+ - xkurak00 Ondrej Kurák
+ - xbazik00 Martin Bažík
 
 ### Licence
 -----------
