@@ -1,0 +1,5 @@
+Profilling prebieha na 10^4, 10^5 a 10^6 náhodne vygenerovaných číslach.
+Počet čísel bol zvýšený, aby bolo možné namerať hodnoty.
+Program trávy najviac času pri "vytváraní" listu s drhými mocninami.
+Optimalizácia bez použitia externej knižnice (numpy) nie je veľmi možná,
+momentálna implementácia kladie dôraz na maxímalne využita možností pythonu.

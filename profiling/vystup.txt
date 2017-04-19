@@ -1,0 +1,42 @@
+Profiling mathlib.std (standard deviation): 10^4 numbers
+         8 function calls in 0.002 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.002    0.002 mathlib.py:58(std)
+        1    0.002    0.002    0.002    0.002 mathlib.py:59(<listcomp>)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.sum}
+        1    0.000    0.000    0.000    0.000 {built-in method math.sqrt}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling mathlib.std (standard deviation): 10^5 numbers
+         8 function calls in 0.018 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.018    0.018 mathlib.py:58(std)
+        1    0.017    0.017    0.017    0.017 mathlib.py:59(<listcomp>)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        2    0.001    0.001    0.001    0.001 {built-in method builtins.sum}
+        1    0.000    0.000    0.000    0.000 {built-in method math.sqrt}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+Profiling mathlib.std (standard deviation): 10^6 numbers
+         8 function calls in 0.182 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.007    0.007    0.182    0.182 mathlib.py:58(std)
+        1    0.166    0.166    0.166    0.166 mathlib.py:59(<listcomp>)
+        2    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+        2    0.009    0.005    0.009    0.005 {built-in method builtins.sum}
+        1    0.000    0.000    0.000    0.000 {built-in method math.sqrt}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
