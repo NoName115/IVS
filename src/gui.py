@@ -9,8 +9,8 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
-from mathlib import *
-from gui_lin import *
+from src.mathlib import *
+from src.gui_lin import *
 
 
 class Ui_Form(QtWidgets.QWidget):
@@ -985,8 +985,8 @@ class Ui_Form(QtWidgets.QWidget):
             self.label.setText(_translate("self", str(err)))
 
 
-if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
+def Win_run(ar):
+    app = QtWidgets.QApplication(ar)
     ui = Ui_Form()
     ui.show()
     sys.exit(app.exec_())
