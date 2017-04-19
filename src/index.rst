@@ -22,6 +22,14 @@ IVS 2017 - Calculator
    :members:
    :undoc-members:
 
+.. automodule:: profiler
+   :members:
+   :undoc-members:
+
+.. automodule:: gui_lin
+   :members:
+   :undoc-members:
+
 Indices and tables
 ==================
 
