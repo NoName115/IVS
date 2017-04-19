@@ -5,16 +5,16 @@ build:
     - script:
         name: Compilation
         code: |
-            make
+            make -C src
     - script:
         name: PEP8 check
         code: |
-            make pep
+            make -C src pep
     - script:
         name: Unit tests
         code: |
-            make test
+            make -C src test
     - script:
         name: Build documentation and pack project
         code: |
-            make pack
+            make -C src pack
