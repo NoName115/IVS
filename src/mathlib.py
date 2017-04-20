@@ -77,7 +77,8 @@ class Solver(object):
         Returns:
             Standard deviation
         """
-        return math.sqrt(1/(len(x)-1)*(sum([a**2 for a in x]) - sum(x)**2/len(x)))
+        return math.sqrt(1 / (len(x) - 1) *
+                         (sum([a**2 for a in x]) - sum(x)**2/len(x)))
 
     @staticmethod
     def __switch(sw, function):
@@ -129,7 +130,7 @@ class Solver(object):
         """Arc tangent function"""
         return self.__tri(False, math.atan(number))
 
-    #sqrt,
+    # sqrt
     @staticmethod
     def sqrt(number):
         """Square root function"""

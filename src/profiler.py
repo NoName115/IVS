@@ -5,13 +5,13 @@ from mathlib import Solver
 import math
 from random import random
 
-profile_sets = [[int(random()*100) for _ in range(10**x)] for x in range(4,7)]
+psets = [[int(random()*100) for _ in range(10**x)] for x in range(4, 7)]
 
 solver = Solver()
 
-for i in profile_sets:
+for i in psets:
     profiler = cProfile.Profile()
-    print('Profiling mathlib.std (standard deviation): 10^', 
+    print('Profiling mathlib.std (standard deviation): 10^',
           int(math.log10(len(i))), ' numbers', sep='')
     profiler.runcall(solver.std, i)
     profiler.print_stats()
