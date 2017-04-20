@@ -11,6 +11,7 @@ solver = Solver()
 
 for i in profile_sets:
     profiler = cProfile.Profile()
-    print('Profiling mathlib.std (standard deviation): 10^', int(math.log10(len(i))), ' numbers', sep='')
+    print('Profiling mathlib.std (standard deviation): 10^', 
+          int(math.log10(len(i))), ' numbers', sep='')
     profiler.runcall(solver.std, i)
     profiler.print_stats()

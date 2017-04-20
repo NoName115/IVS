@@ -7,10 +7,6 @@ build:
         code: |
             make -C src
     - script:
-        name: PEP8 check
-        code: |
-            make -C src pep
-    - script:
         name: Unit tests
         code: |
             make -C src test
@@ -18,3 +14,7 @@ build:
         name: Build documentation and pack project
         code: |
             make -C src pack
+    - script:
+        name: PEP8 check
+        code: |
+            make -C src pep
