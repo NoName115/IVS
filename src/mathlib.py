@@ -1,50 +1,57 @@
 #!/usr/bin/env python3
+"""Library for mathematical operations
 
-from math import *
-import string
+"""
 
 
-class solver():
+import math
+import numpy as np
+
+
+class Solver(object):
+    """ Solver class with mathematical operations
+
+
+    """
 
     def __init__(self):
+        """ Initialization of `Solver`
+
+        Initialization of basic variables and preparing dictionaries
+        for eval.
+        """
         # Variables
         self.ans = 0
+        """float: Result of last operation"""
         self.variables = {}
-        for letter in string.ascii_uppercase:
-            self.variables[letter] = 0
+        """dict: Dictionary with variables"""
         self.variables['ans'] = self.ans
 
         # Constants
-        self.constants = {'pi': pi, 'e': e}
-
-        # Functions
-        self.sqrt = sqrt
-        self.log = log
-        self.log10 = log10
-        self.factorial = factorial
-        self.abs = abs
-
-        # Trigonometric functions
-        self.is_degree = False
-        self.cos = cos
-        self.sin = sin
-        self.tan = tan
-        self.acos = acos
-        self.asin = asin
-        self.atan = atan
-
+        self.constants = {'pi': math.pi, 'e': math.e}
+        """dict: Dictionary with constants pi and e"""
         self.__make_dicts()
+        self.is_degree = False
+        """bool: Indicates if trigonometric are set to operate with radians
+        or degrees"""
 
     def switch_rad_deg(self):
-        self.cos = cos if self.is_degree else self.__switch(True, cos)
-        self.sin = sin if self.is_degree else self.__switch(True, sin)
-        self.tan = tan if self.is_degree else self.__switch(True, tan)
-        self.acos = acos if self.is_degree else self.__switch(False, acos)
-        self.asin = asin if self.is_degree else self.__switch(False, asin)
-        self.atan = atan if self.is_degree else self.__switch(False, atan)
+        """Method for switching between radians and degrees
+
+        Method sets `self.is_degree` parameter to True or False
+        """
         self.is_degree = not self.is_degree
 
     def solve(self, text):
+        """Method for solving mathematical expression from string
+
+        Method solves mathematical expresion and returns result or string with
+        error
+        Args:
+            param1 (str): String with expression
+        Returns:
+            Result or error string
+        """
         try:
             self.ans = eval(text, {}, {**self.variables,
                                        **self.constants,
@@ -52,19 +59,29 @@ class solver():
                                        **self.trigon,
                                        **self.atrigon})
             return self.ans
-        except ZeroDivisionError as e:
-            return ZeroDivisionError
 
-    def std(self, x):
-        return sqrt(1/(len(x)-1)*(sum([a**2 for a in x]) - sum(x)**2/len(x)))
+        except ZeroDivisionError:
+            return "Division by zero!"
+        except ValueError:
+            return "Values out of range (asin, log..)"
+        except Exception as e:
+            return "Invalid syntax"
 
-    def store(self, cls):
-        def storing(name, value):
-            cls.variables[name] = value
-            return value
-        return storing
+    @staticmethod
+    def std(x):
+        """Method for standard deviation
 
-    def __switch(self, sw, function):
+        Method counts standard deviation from array of numbers
+        Args:
+            param1 (list): List of numbers
+        Returns:
+            Standard deviation
+        """
+        return math.sqrt(1/(len(x)-1)*(sum([a**2 for a in x]) - sum(x)**2/len(x)))
+
+    @staticmethod
+    def __switch(sw, function):
+        """Switch between radians and degrees"""
         def degree_wrapper(x):
             return function(radians(x))
 
@@ -75,6 +92,78 @@ class solver():
             return degree_wrapper
         else:
             return radian_wrapper
+
+    def __tri(self, fn, number):
+        """Wrapper for numbers"""
+        if self.is_degree:
+            if fn:
+                # cos, sin, tan
+                return math.radians(number)
+            else:
+                # acos, asin, atan
+                return math.degrees(number)
+        return number
+
+    # Goniometricke funkcie
+    def cos(self, number):
+        """Sine function"""
+        return math.cos(self.__tri(True, number))
+
+    def sin(self, number):
+        """Cosine function"""
+        return math.sin(self.__tri(True, number))
+
+    def tan(self, number):
+        """Tangent function"""
+        return math.tan(self.__tri(True, number))
+
+    def acos(self, number):
+        """Arc sine function"""
+        return self.__tri(False, math.acos(number))
+
+    def asin(self, number):
+        """Arc cosine function"""
+        return self.__tri(False, math.asin(number))
+
+    def atan(self, number):
+        """Arc tangent function"""
+        return self.__tri(False, math.atan(number))
+
+    #sqrt,
+    @staticmethod
+    def sqrt(number):
+        """Square root function"""
+        return math.sqrt(number)
+
+    @staticmethod
+    def root(power, number):
+        """Root function"""
+        return math.pow(number, 1/power)
+
+    @staticmethod
+    def log(number):
+        """Natural logarithm function"""
+        return math.log(number)
+
+    @staticmethod
+    def log10(number):
+        """Decadic logarithm function"""
+        return math.log10(number)
+
+    @staticmethod
+    def factorial(number):
+        """Factorial function"""
+        return math.factorial(number)
+
+    @staticmethod
+    def abs(number):
+        """Absolute value function"""
+        return abs(number)
+
+    @staticmethod
+    def sum(array):
+        """Sum function"""
+        return sum(array)
 
     def __make_dicts(self):
         self.trigon = {'cos': self.cos,
@@ -87,5 +176,4 @@ class solver():
                           'log': self.log,
                           'log10': self.log10,
                           'fact': self.factorial,
-                          'abs': self.abs,
-                          'store': self.store(self)}
+                          'abs': self.abs}

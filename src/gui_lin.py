@@ -9,7 +9,10 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
-from src.mathlib import *
+try:
+    from src.mathlib import Solver
+except ImportError:
+    from mathlib import Solver
 
 
 class Ui_Form_LinearSystem(QtWidgets.QWidget):

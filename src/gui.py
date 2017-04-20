@@ -9,8 +9,12 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
-from src.mathlib import *
-from src.gui_lin import *
+try:
+    from src.mathlib import Solver
+    from src.gui_lin import *
+except ImportError:
+    from mathlib import Solver
+    from gui_lin import *
 
 
 class Ui_Form(QtWidgets.QWidget):
@@ -18,7 +22,7 @@ class Ui_Form(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
         self.clearExpression = False
-        self.mathSolver = solver()
+        self.mathSolver = Solver()
         self.linearSystem = Ui_Form_LinearSystem(self)
         self.setupUi()
 
