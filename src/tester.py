@@ -8,7 +8,7 @@ import mathlib
 class mlib_test(unittest.TestCase):
 
     def setUp(self):
-        self.solver = mathlib.solver()
+        self.solver = mathlib.Solver()
 
     def test_addition(self):
         self.assertEqual(self.solver.solve('1+1'), 1+1)
@@ -20,7 +20,7 @@ class mlib_test(unittest.TestCase):
 
     def test_division(self):
         self.assertEqual(self.solver.solve('10/13'), 10/13)
-        self.assertEqual(self.solver.solve('8/0'), ZeroDivisionError)
+        self.assertEqual(self.solver.solve('8/0'), 'Division by zero!')
 
     def test_negative(self):
         self.assertEqual(self.solver.solve('0 - 100'), -100)
