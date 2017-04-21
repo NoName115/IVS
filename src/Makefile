@@ -20,6 +20,8 @@ clean:
 	rm -f *.pyc
 	rm -rf __pycache__
 	rm -rf $(DOCDIR)
+	rm -rf ../dist
+	rm -rf ../ivs_calculator.egg-info
 
 test:
 	python3 tester.py
