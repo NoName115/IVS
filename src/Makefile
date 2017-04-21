@@ -13,6 +13,9 @@ all:
 pack: doc
 	#TODO
 
+package:
+	cd .. && python3 setup.py sdist
+
 clean:
 	rm -f *.pyc
 	rm -rf __pycache__
