@@ -30,7 +30,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.setObjectName("self")
         self.setWindowModality(QtCore.Qt.NonModal)
         self.setEnabled(True)
-        self.resize(878, 583)
+        self.resize(903, 583)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Preferred,
             QtWidgets.QSizePolicy.Preferred
@@ -313,9 +313,7 @@ class Ui_Form(QtWidgets.QWidget):
             )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_20.sizePolicy().hasHeightForWidth()
-            )
+        sizePolicy.setHeightForWidth(self.pushButton_20.sizePolicy().hasHeightForWidth())
         self.pushButton_20.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(16)
@@ -414,33 +412,11 @@ class Ui_Form(QtWidgets.QWidget):
         font.setItalic(False)
         self.pushButton_3.setFont(font)
         self.pushButton_3.setObjectName("pushButton_3")
-        self.gridLayout_2.addWidget(self.pushButton_3, 0, 3, 1, 1)
-
-        self.pushButton_4 = QtWidgets.QPushButton(self)
-        self.pushButton_4.clicked.connect(
-            lambda: self.addTextToExpression("acos(")
-            )
-
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-            )
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_4.sizePolicy().hasHeightForWidth()
-            )
-        self.pushButton_4.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        font.setItalic(False)
-        self.pushButton_4.setFont(font)
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.gridLayout_2.addWidget(self.pushButton_4, 2, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_3, 0, 4, 1, 1)
 
         self.pushButton_6 = QtWidgets.QPushButton(self)
         self.pushButton_6.clicked.connect(
-            lambda: self.addTextToExpression("x√")
+            lambda: self.addTextToExpression("x√(")
             )
 
         sizePolicy = QtWidgets.QSizePolicy(
@@ -458,11 +434,11 @@ class Ui_Form(QtWidgets.QWidget):
         font.setItalic(False)
         self.pushButton_6.setFont(font)
         self.pushButton_6.setObjectName("pushButton_6")
-        self.gridLayout_2.addWidget(self.pushButton_6, 2, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_6, 2, 4, 1, 1)
 
         self.pushButton_5 = QtWidgets.QPushButton(self)
         self.pushButton_5.clicked.connect(
-            lambda: self.addTextToExpression("√")
+            lambda: self.addTextToExpression("√(")
             )
 
         sizePolicy = QtWidgets.QSizePolicy(
@@ -480,7 +456,7 @@ class Ui_Form(QtWidgets.QWidget):
         font.setItalic(False)
         self.pushButton_5.setFont(font)
         self.pushButton_5.setObjectName("pushButton_5")
-        self.gridLayout_2.addWidget(self.pushButton_5, 2, 2, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_5, 2, 3, 1, 1)
 
         self.pushButton_2 = QtWidgets.QPushButton(self)
         self.pushButton_2.clicked.connect(
@@ -502,7 +478,118 @@ class Ui_Form(QtWidgets.QWidget):
         font.setItalic(False)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_2.addWidget(self.pushButton_2, 0, 2, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_2, 0, 3, 1, 1)
+
+        self.pushButton_7 = QtWidgets.QPushButton(self)
+        self.pushButton_7.clicked.connect(self.openLinearSystemWindow)
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_7.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_7.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setItalic(False)
+        self.pushButton_7.setFont(font)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.gridLayout_2.addWidget(self.pushButton_7, 3, 3, 1, 2)
+
+        self.pushButton_8 = QtWidgets.QPushButton(self)
+        self.pushButton_8.clicked.connect(
+            self.clearExpressionLable
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_8.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_8.setSizePolicy(sizePolicy)
+        self.pushButton_8.setObjectName("pushButton_8")
+        self.gridLayout_2.addWidget(self.pushButton_8, 0, 0, 1, 1)
+
+        self.pushButton_10 = QtWidgets.QPushButton(self)
+        self.pushButton_10.clicked.connect(
+            self.removeOneCharacter
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_10.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_10.setSizePolicy(sizePolicy)
+        self.pushButton_10.setObjectName("pushButton_10")
+        self.gridLayout_2.addWidget(self.pushButton_10, 1, 0, 1, 1)
+
+        self.pushButton_11 = QtWidgets.QPushButton(self)
+        self.pushButton_11.clicked.connect(
+            lambda: self.addTextToExpression("ans")
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_11.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_11.setSizePolicy(sizePolicy)
+        self.pushButton_11.setObjectName("pushButton_11")
+        self.gridLayout_2.addWidget(self.pushButton_11, 2, 0, 1, 1)
+
+        self.pushButton_12 = QtWidgets.QPushButton(self)
+        self.pushButton_12.clicked.connect(
+            lambda: self.addTextToExpression("abs(")
+            )
+
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_12.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_12.setSizePolicy(sizePolicy)
+        self.pushButton_12.setObjectName("pushButton_12")
+        self.gridLayout_2.addWidget(self.pushButton_12, 3, 0, 1, 1)
+
+        self.pushButton_32 = QtWidgets.QPushButton(self)
+        self.pushButton_32.clicked.connect(
+            lambda: self.addTextToExpression("sin(")
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_32.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_32.setSizePolicy(sizePolicy)
+        self.pushButton_32.setObjectName("pushButton_32")
+        self.gridLayout_2.addWidget(self.pushButton_32, 0, 1, 1, 1)
 
         self.pushButton = QtWidgets.QPushButton(self)
         self.pushButton.clicked.connect(
@@ -524,7 +611,65 @@ class Ui_Form(QtWidgets.QWidget):
         font.setItalic(False)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
-        self.gridLayout_2.addWidget(self.pushButton, 1, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton, 0, 2, 1, 1)
+
+        self.pushButton_34 = QtWidgets.QPushButton(self)
+        self.pushButton_34.clicked.connect(
+            lambda: self.addTextToExpression("cos(")
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_34.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_34.setSizePolicy(sizePolicy)
+        self.pushButton_34.setObjectName("pushButton_34")
+        self.gridLayout_2.addWidget(self.pushButton_34, 1, 1, 1, 1)
+
+        self.pushButton_4 = QtWidgets.QPushButton(self)
+        self.pushButton_4.clicked.connect(
+            lambda: self.addTextToExpression("acos(")
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_4.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_4.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        font.setItalic(False)
+        self.pushButton_4.setFont(font)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.gridLayout_2.addWidget(self.pushButton_4, 1, 2, 1, 1)
+
+        self.pushButton_35 = QtWidgets.QPushButton(self)
+        self.pushButton_35.clicked.connect(
+            lambda: self.addTextToExpression("tang(")
+            )
+
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding,
+            QtWidgets.QSizePolicy.Expanding
+            )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(
+            self.pushButton_35.sizePolicy().hasHeightForWidth()
+            )
+        self.pushButton_35.setSizePolicy(sizePolicy)
+        self.pushButton_35.setObjectName("pushButton_35")
+        self.gridLayout_2.addWidget(self.pushButton_35, 2, 1, 1, 1)
 
         self.pushButton_9 = QtWidgets.QPushButton(self)
         self.pushButton_9.clicked.connect(
@@ -546,7 +691,7 @@ class Ui_Form(QtWidgets.QWidget):
         font.setItalic(False)
         self.pushButton_9.setFont(font)
         self.pushButton_9.setObjectName("pushButton_9")
-        self.gridLayout_2.addWidget(self.pushButton_9, 3, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_9, 2, 2, 1, 1)
 
         self.pushButton_30 = QtWidgets.QPushButton(self)
         self.pushButton_30.clicked.connect(
@@ -566,61 +711,9 @@ class Ui_Form(QtWidgets.QWidget):
         self.pushButton_30.setObjectName("pushButton_30")
         self.gridLayout_2.addWidget(self.pushButton_30, 1, 3, 1, 1)
 
-        self.pushButton_32 = QtWidgets.QPushButton(self)
-        self.pushButton_32.clicked.connect(
-            lambda: self.addTextToExpression("sin(")
-            )
-
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-            )
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_32.sizePolicy().hasHeightForWidth()
-            )
-        self.pushButton_32.setSizePolicy(sizePolicy)
-        self.pushButton_32.setObjectName("pushButton_32")
-        self.gridLayout_2.addWidget(self.pushButton_32, 1, 0, 1, 1)
-
-        self.pushButton_33 = QtWidgets.QPushButton(self)
-        self.pushButton_33.clicked.connect(self.loadAns)
-
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-            )
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_33.sizePolicy().hasHeightForWidth()
-            )
-        self.pushButton_33.setSizePolicy(sizePolicy)
-        self.pushButton_33.setObjectName("pushButton_33")
-        self.gridLayout_2.addWidget(self.pushButton_33, 0, 0, 1, 1)
-
-        self.pushButton_34 = QtWidgets.QPushButton(self)
-        self.pushButton_34.clicked.connect(
-            lambda: self.addTextToExpression("cos(")
-            )
-
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-            )
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_34.sizePolicy().hasHeightForWidth()
-            )
-        self.pushButton_34.setSizePolicy(sizePolicy)
-        self.pushButton_34.setObjectName("pushButton_34")
-        self.gridLayout_2.addWidget(self.pushButton_34, 2, 0, 1, 1)
-
         self.pushButton_24 = QtWidgets.QPushButton(self)
         self.pushButton_24.clicked.connect(
-            lambda: self.addTextToExpression("abs(")
+            lambda: self.addTextToExpression("^")
             )
 
         sizePolicy = QtWidgets.QSizePolicy(
@@ -634,11 +727,11 @@ class Ui_Form(QtWidgets.QWidget):
             )
         self.pushButton_24.setSizePolicy(sizePolicy)
         self.pushButton_24.setObjectName("pushButton_24")
-        self.gridLayout_2.addWidget(self.pushButton_24, 1, 2, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_24, 1, 4, 1, 1)
 
         self.pushButton_31 = QtWidgets.QPushButton(self)
         self.pushButton_31.clicked.connect(
-            self.clearExpressionLable
+            self.switchRadDeg
             )
 
         sizePolicy = QtWidgets.QSizePolicy(
@@ -652,45 +745,7 @@ class Ui_Form(QtWidgets.QWidget):
             )
         self.pushButton_31.setSizePolicy(sizePolicy)
         self.pushButton_31.setObjectName("pushButton_31")
-        self.gridLayout_2.addWidget(self.pushButton_31, 0, 1, 1, 1)
-
-        self.pushButton_35 = QtWidgets.QPushButton(self)
-        self.pushButton_35.clicked.connect(
-            lambda: self.addTextToExpression("tang(")
-            )
-
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-            )
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_35.sizePolicy().hasHeightForWidth()
-            )
-        self.pushButton_35.setSizePolicy(sizePolicy)
-        self.pushButton_35.setObjectName("pushButton_35")
-        self.gridLayout_2.addWidget(self.pushButton_35, 3, 0, 1, 1)
-
-        self.pushButton_7 = QtWidgets.QPushButton(self)
-        self.pushButton_7.clicked.connect(self.openLinearSystemWindow)
-
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding,
-            QtWidgets.QSizePolicy.Expanding
-            )
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.pushButton_7.sizePolicy().hasHeightForWidth()
-            )
-        self.pushButton_7.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        font.setItalic(False)
-        self.pushButton_7.setFont(font)
-        self.pushButton_7.setObjectName("pushButton_7")
-        self.gridLayout_2.addWidget(self.pushButton_7, 3, 2, 1, 2)
+        self.gridLayout_2.addWidget(self.pushButton_31, 3, 1, 1, 2)
         self.gridLayout.addLayout(self.gridLayout_2, 1, 0, 1, 2)
         self.gridLayout_5 = QtWidgets.QGridLayout()
         self.gridLayout_5.setSizeConstraint(
@@ -727,9 +782,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.pushButton_16.setFont(font)
         self.pushButton_16.setObjectName("pushButton_16")
         self.gridLayout_5.addWidget(self.pushButton_16, 1, 1, 1, 1)
-
         self.label_2 = QtWidgets.QLabel(self)
-
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Preferred,
             QtWidgets.QSizePolicy.Preferred
@@ -754,9 +807,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.label_2.setIndent(20)
         self.label_2.setObjectName("label_2")
         self.gridLayout_5.addWidget(self.label_2, 1, 0, 1, 1)
-
         self.label = QtWidgets.QLabel(self)
-
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Minimum,
             QtWidgets.QSizePolicy.Preferred
@@ -816,20 +867,23 @@ class Ui_Form(QtWidgets.QWidget):
         self.pushButton_19.setText(_translate("self", "-"))
         self.pushButton_21.setText(_translate("self", "/"))
         self.pushButton_3.setText(_translate("self", ")"))
-        self.pushButton_4.setText(_translate("self", "acos"))
         self.pushButton_6.setText(_translate("self", "x√"))
         self.pushButton_5.setText(_translate("self", "2√"))
         self.pushButton_2.setText(_translate("self", "("))
+        self.pushButton_7.setText(_translate("self", "Linear system"))
+        self.pushButton_8.setText(_translate("self", "CE"))
+        self.pushButton_10.setText(_translate("self", "C"))
+        self.pushButton_11.setText(_translate("self", "ANS"))
+        self.pushButton_12.setText(_translate("self", "abs"))
+        self.pushButton_32.setText(_translate("self", "sin"))
         self.pushButton.setText(_translate("self", "asin"))
+        self.pushButton_34.setText(_translate("self", "cos"))
+        self.pushButton_4.setText(_translate("self", "acos"))
+        self.pushButton_35.setText(_translate("self", "tang"))
         self.pushButton_9.setText(_translate("self", "atang"))
         self.pushButton_30.setText(_translate("self", "!"))
-        self.pushButton_32.setText(_translate("self", "sin"))
-        self.pushButton_33.setText(_translate("self", "ANS"))
-        self.pushButton_34.setText(_translate("self", "cos"))
-        self.pushButton_24.setText(_translate("self", "abs"))
-        self.pushButton_31.setText(_translate("self", "CE"))
-        self.pushButton_35.setText(_translate("self", "tang"))
-        self.pushButton_7.setText(_translate("self", "Linear system"))
+        self.pushButton_24.setText(_translate("self", "x^y"))
+        self.pushButton_31.setText(_translate("self", "Swith to radian"))
         self.pushButton_16.setText(_translate("self", "="))
         self.label_2.setText(_translate("self", ""))
         self.label.setText(_translate("self", ""))
@@ -905,6 +959,12 @@ class Ui_Form(QtWidgets.QWidget):
         elif (e.key() == Qt.Key_R):
             self.addTextToExpression("r")
 
+        elif (e.key() == Qt.Key_E):
+            self.addTextToExpression("e")
+
+        elif (e.key() == Qt.Key_P):
+            self.addTextToExpression("p")
+
         elif (e.key() == Qt.Key_Plus):
             self.addTextToExpression("+")
 
@@ -920,6 +980,9 @@ class Ui_Form(QtWidgets.QWidget):
         elif (e.key() == Qt.Key_Period):
             self.addTextToExpression(".")
 
+        elif (e.key() == Qt.Key_Comma):
+            self.addTextToExpression(",")
+
         elif (e.key() == Qt.Key_Enter or e.key() == Qt.Key_Return):
             self.solveExpression()
 
@@ -934,6 +997,13 @@ class Ui_Form(QtWidgets.QWidget):
 
         elif (e.key() == Qt.Key_Escape):
             self.close()
+
+    def switchRadDeg(self):
+        self.mathSolver.switch_rad_deg()
+        if (self.mathSolver.is_degree):
+            self.pushButton_31.setText("Swith to radian")
+        else:
+            self.pushButton_31.setText("Swith to degree")
 
     def openLinearSystemWindow(self):
         self.linearSystem.show()
@@ -980,9 +1050,15 @@ class Ui_Form(QtWidgets.QWidget):
         _translate = QtCore.QCoreApplication.translate
         try:
             self.clearExpression = True
+            expression = self.label_2.text()
+            expression = expression.replace("^", "**")
+            expression = expression.replace("x√", "root")
+            expression = expression.replace("√", "sqrt")
+
+            print(expression)
             self.label.setText(_translate(
                 "self",
-                str(self.mathSolver.solve(self.label_2.text()))
+                str(self.mathSolver.solve(expression))
                 ))
 
         except Exception as err:
@@ -994,3 +1070,7 @@ def Win_run(ar):
     ui = Ui_Form()
     ui.show()
     sys.exit(app.exec_())
+
+# TODO
+# Vymazat toto
+Win_run(sys.argv)
