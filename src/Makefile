@@ -17,7 +17,7 @@ pack: doc
 	mkdir -p $(REPODIR)
 	cp -ar ../* $(REPODIR)
 	cp -r $(DOCDIR) $(TEMPDIR)/doc
-	cd $(TEMPDIR) && zip -qr $(HERE)/xkolcu00.zip ./*
+	cd $(TEMPDIR) && zip -qr $(HERE)/xbazik00_xcubae00_xkolcu00_xkurak00.zip ./*
 	rm -rf $(TEMPDIR)
 
 package:
