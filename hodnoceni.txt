@@ -1,4 +1,4 @@
-xkolcu00 X
-xcubae00 X
-xkurak00 X
-xbazik00 X
+xkolcu00 100
+xcubae00 100
+xkurak00 100
+xbazik00 100
