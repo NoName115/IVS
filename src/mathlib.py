@@ -57,8 +57,8 @@ class Solver(object):
                                        **self.constants,
                                        **self.functions,
                                        **self.trigon,
-                                       **self.atrigon
-                                       , 'ans': self.ans})
+                                       **self.atrigon,
+                                       'ans': self.ans})
             return self.ans
 
         except ZeroDivisionError:

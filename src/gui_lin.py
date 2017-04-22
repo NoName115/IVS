@@ -530,9 +530,12 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
                 int(self.lineEdit_9.text()) if (self.lineEdit_9.text()) else 0
             ]
             rightLin = [
-                int(self.lineEdit_10.text()) if (self.lineEdit_10.text()) else 0,
-                int(self.lineEdit_11.text()) if (self.lineEdit_11.text()) else 0,
-                int(self.lineEdit_12.text()) if (self.lineEdit_12.text()) else 0
+                int(self.lineEdit_10.text()) if (self.lineEdit_10.text())
+                else 0,
+                int(self.lineEdit_11.text()) if (self.lineEdit_11.text())
+                else 0,
+                int(self.lineEdit_12.text()) if (self.lineEdit_12.text())
+                else 0
             ]
 
             resultLin = self.parentUi.mathSolver.linear_solve(firstLin,
