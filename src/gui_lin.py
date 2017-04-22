@@ -532,8 +532,10 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
             int(self.lineEdit_12.text()) if (self.lineEdit_12.text()) else 0
         ]
 
-        # TODO
-        # resultLin = self.parentUi.mathSolver.
+        resultLin = self.parentUi.mathSolver.linear_solve(firstLin,
+                                                          secondLin,
+                                                          thirdLin,
+                                                          rightLin)
 
         _translate = QtCore.QCoreApplication.translate
         self.label_14.setText(_translate(

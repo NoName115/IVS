@@ -1055,7 +1055,6 @@ class Ui_Form(QtWidgets.QWidget):
             expression = expression.replace("x√", "root")
             expression = expression.replace("√", "sqrt")
 
-            print(expression)
             self.label.setText(_translate(
                 "self",
                 str(self.mathSolver.solve(expression))
@@ -1070,7 +1069,3 @@ def Win_run(ar):
     ui = Ui_Form()
     ui.show()
     sys.exit(app.exec_())
-
-# TODO
-# Vymazat toto
-Win_run(sys.argv)

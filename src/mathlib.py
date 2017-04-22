@@ -166,6 +166,16 @@ class Solver(object):
         """Sum function"""
         return sum(array)
 
+    @staticmethod
+    def linear_solve(eq1, eq2, eq3, res):
+        """Function for solving system of linear equalations"""
+        ars = np.array([eq1, eq2, eq3])
+        rs = np.array(res)
+        try:
+            return np.linalg.solve(ars, rs)
+        except:
+            return None
+
     def __make_dicts(self):
         self.trigon = {'cos': self.cos,
                        'sin': self.sin,
@@ -177,4 +187,5 @@ class Solver(object):
                           'log': self.log,
                           'log10': self.log10,
                           'fact': self.factorial,
-                          'abs': self.abs}
+                          'abs': self.abs,
+                          'root': self.root}
