@@ -57,7 +57,8 @@ class Solver(object):
                                        **self.constants,
                                        **self.functions,
                                        **self.trigon,
-                                       **self.atrigon})
+                                       **self.atrigon
+                                       , 'ans': self.ans})
             return self.ans
 
         except ZeroDivisionError:
@@ -172,7 +173,7 @@ class Solver(object):
         ars = np.array([eq1, eq2, eq3])
         rs = np.array(res)
         try:
-            return np.linalg.solve(ars, rs)
+            return np.linalg.solve(ars, rs).tolist()
         except:
             return None
 
