@@ -1,9 +1,12 @@
 # IVS PROJEKT 2017
 
-SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = IVS2017
-SOURCEDIR     = .
-DOCDIR        = ../doc
+SPHINXBUILD = sphinx-build
+SPHINXPROJ  = IVS2017
+SOURCEDIR   = .
+DOCDIR      = ../doc
+TEMPDIR     = /tmp/__temp_ivs_pack__
+REPODIR     = $(TEMPDIR)/repo
+HERE    	= $(PWD)
 
 default: all
 
@@ -11,7 +14,11 @@ all:
 	python3 -m compileall *.py
 
 pack: doc
-	#TODO
+	mkdir -p $(REPODIR)
+	cp -ar ../* $(REPODIR)
+	cp -r $(DOCDIR) $(TEMPDIR)/doc
+	cd $(TEMPDIR) && zip -qr $(HERE)/xkolcu00.zip ./*
+	rm -rf $(TEMPDIR)
 
 package:
 	cd .. && python3 setup.py sdist
