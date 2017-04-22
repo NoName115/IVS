@@ -511,39 +511,53 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
             ))
 
     def calculateLinSystem(self):
-        firstLin = [
-            int(self.lineEdit_7.text()) if (self.lineEdit_7.text()) else 0,
-            int(self.lineEdit_5.text()) if (self.lineEdit_5.text()) else 0,
-            int(self.lineEdit_6.text()) if (self.lineEdit_6.text()) else 0
-            ]
-        secondLin = [
-            int(self.lineEdit_4.text()) if (self.lineEdit_4.text()) else 0,
-            int(self.lineEdit_2.text()) if (self.lineEdit_2.text()) else 0,
-            int(self.lineEdit_8.text()) if (self.lineEdit_8.text()) else 0
-        ]
-        thirdLin = [
-            int(self.lineEdit.text()) if (self.lineEdit.text()) else 0,
-            int(self.lineEdit_3.text()) if (self.lineEdit_3.text()) else 0,
-            int(self.lineEdit_9.text()) if (self.lineEdit_9.text()) else 0
-        ]
-        rightLin = [
-            int(self.lineEdit_10.text()) if (self.lineEdit_10.text()) else 0,
-            int(self.lineEdit_11.text()) if (self.lineEdit_11.text()) else 0,
-            int(self.lineEdit_12.text()) if (self.lineEdit_12.text()) else 0
-        ]
-
-        resultLin = self.parentUi.mathSolver.linear_solve(firstLin,
-                                                          secondLin,
-                                                          thirdLin,
-                                                          rightLin)
-
         _translate = QtCore.QCoreApplication.translate
-        self.label_14.setText(_translate(
-            "self",
-            "x1=" + str(resultLin[0]) + "    " +
-            "x2=" + str(resultLin[1]) + "    " +
-            "x3=" + str(resultLin[2])
-            ))
+
+        try:
+            firstLin = [
+                int(self.lineEdit_7.text()) if (self.lineEdit_7.text()) else 0,
+                int(self.lineEdit_5.text()) if (self.lineEdit_5.text()) else 0,
+                int(self.lineEdit_6.text()) if (self.lineEdit_6.text()) else 0
+                ]
+            secondLin = [
+                int(self.lineEdit_4.text()) if (self.lineEdit_4.text()) else 0,
+                int(self.lineEdit_2.text()) if (self.lineEdit_2.text()) else 0,
+                int(self.lineEdit_8.text()) if (self.lineEdit_8.text()) else 0
+            ]
+            thirdLin = [
+                int(self.lineEdit.text()) if (self.lineEdit.text()) else 0,
+                int(self.lineEdit_3.text()) if (self.lineEdit_3.text()) else 0,
+                int(self.lineEdit_9.text()) if (self.lineEdit_9.text()) else 0
+            ]
+            rightLin = [
+                int(self.lineEdit_10.text()) if (self.lineEdit_10.text()) else 0,
+                int(self.lineEdit_11.text()) if (self.lineEdit_11.text()) else 0,
+                int(self.lineEdit_12.text()) if (self.lineEdit_12.text()) else 0
+            ]
+
+            resultLin = self.parentUi.mathSolver.linear_solve(firstLin,
+                                                              secondLin,
+                                                              thirdLin,
+                                                              rightLin)
+
+            if (not resultLin):
+                self.label_14.setText(_translate(
+                    "self",
+                    "Invalid input"
+                    ))
+            else:
+                self.label_14.setText(_translate(
+                    "self",
+                    "x1=" + str(resultLin[0]) + "    " +
+                    "x2=" + str(resultLin[1]) + "    " +
+                    "x3=" + str(resultLin[2])
+                    ))
+        except:
+            self.label_14.setText(_translate(
+                "self",
+                "Invalid input"
+                ))
+            return
 
     def closeEvent(self, event):
         self.hide()

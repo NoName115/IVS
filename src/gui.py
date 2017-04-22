@@ -313,7 +313,9 @@ class Ui_Form(QtWidgets.QWidget):
             )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_20.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.pushButton_20.sizePolicy().hasHeightForWidth()
+            )
         self.pushButton_20.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setPointSize(16)
@@ -558,7 +560,6 @@ class Ui_Form(QtWidgets.QWidget):
         self.pushButton_12.clicked.connect(
             lambda: self.addTextToExpression("abs(")
             )
-
 
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Expanding,
@@ -883,7 +884,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.pushButton_9.setText(_translate("self", "atang"))
         self.pushButton_30.setText(_translate("self", "!"))
         self.pushButton_24.setText(_translate("self", "x^y"))
-        self.pushButton_31.setText(_translate("self", "Swith to radian"))
+        self.pushButton_31.setText(_translate("self", "Swith to degree"))
         self.pushButton_16.setText(_translate("self", "="))
         self.label_2.setText(_translate("self", ""))
         self.label.setText(_translate("self", ""))
