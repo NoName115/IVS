@@ -34,10 +34,11 @@
         fi
     fi
 
-    if [ "$1" = "online" ]; then
-        sudo -H pip3 install ivs-calculator 2>/dev/null
-    elif [ "$1" = "offline" ]; then
+        
+    if [ "$1" = "offline" ]; then
         sudo -H pip3 install $2 2>/dev/null
+    else
+        sudo -H pip3 install ivs-calculator 2>/dev/null
     fi
 
     echo "Installation was successful!"
