@@ -1,0 +1,11 @@
+Rozdiel medzi stanoveným plánom práce a skutočnostou nastal v niekoľkých bodoch:
+
+| Plán do |                Úloha                  | Zodpovedný | Skutočný dátum splnenia |
+------------------------------------------------------------------------------------------
+|  12.03  | Mockup pre rozšírenú kalkulačku       |   Všetci   |         22.4            |
+|  19.03  | (Od)Inštalátor + uziv.príručka        |  xbazik00  |         22.4            |
+|  26.03  | Implementácia UI                      |  xkolcu00  |         22.4            |
+|  01.04  | Snímok debuggeru                      |  xbazik00  |         23.4            |
+|  01.04  | Implementácia rátania sus.lin. rovníc |  xkurak00  |         22.4            |
+|  01.04  | Makefile                              |  xcuba00   |         20.4            |
+------------------------------------------------------------------------------------------
