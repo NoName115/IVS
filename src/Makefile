@@ -19,6 +19,7 @@ pack: doc
 	cp -r $(DOCDIR) $(TEMPDIR)/doc
 	rm -rf $(REPODIR)/doc
 	make -C $(REPODIR)/src clean
+	mv $(REPODIR)/installer $(TEMPDIR)/install
 	cd $(TEMPDIR) && zip -qr $(HERE)/xbazik00_xcubae00_xkolcu00_xkurak00.zip ./*
 	rm -rf $(TEMPDIR)
 
