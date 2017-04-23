@@ -16,6 +16,7 @@ all: *.py
 pack: doc
 	mkdir -p $(REPODIR)
 	cp -ar ../* $(REPODIR)
+	cp -r ../.git $(REPODIR)
 	cp -r $(DOCDIR) $(TEMPDIR)/doc
 	rm -rf $(REPODIR)/doc
 	make -C $(REPODIR)/src clean
