@@ -480,31 +480,31 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("self", "Linear system - IVS"))
         self.pushButton.setText(_translate("self", "Calculate"))
-        self.lineEdit_7.setText(_translate("self", "2_3"))    # OK
-        self.lineEdit_5.setText(_translate("self", "2_1"))    # OK
-        self.lineEdit_6.setText(_translate("self", "2_2"))    # OK
+        self.lineEdit_7.setText(_translate("self", ""))    # OK
+        self.lineEdit_5.setText(_translate("self", ""))    # OK
+        self.lineEdit_6.setText(_translate("self", ""))    # OK
         self.label_8.setText(_translate("self", "z"))
         self.label.setText(_translate("self", "Linear system"))
         self.label_2.setText(_translate("self", "="))
         self.label_9.setText(_translate("self", "="))
         self.label_7.setText(_translate("self", "y"))
-        self.lineEdit_4.setText(_translate("self", "x_1"))    # OK
-        self.lineEdit_2.setText(_translate("self", "1_2"))    # OK
-        self.lineEdit_8.setText(_translate("self", "x_2"))    # OK
+        self.lineEdit_4.setText(_translate("self", ""))    # OK
+        self.lineEdit_2.setText(_translate("self", ""))    # OK
+        self.lineEdit_8.setText(_translate("self", ""))    # OK
         self.label_6.setText(_translate("self", "x"))
         self.label_5.setText(_translate("self", "z"))
         self.label_4.setText(_translate("self", "y"))
         self.label_3.setText(_translate("self", "x"))
-        self.lineEdit.setText(_translate("self", "1_1"))    # OK
-        self.lineEdit_3.setText(_translate("self", "1_3"))    # OK
-        self.lineEdit_9.setText(_translate("self", "3_1"))    # OK
+        self.lineEdit.setText(_translate("self", ""))    # OK
+        self.lineEdit_3.setText(_translate("self", ""))    # OK
+        self.lineEdit_9.setText(_translate("self", ""))    # OK
         self.label_10.setText(_translate("self", "x"))
-        self.lineEdit_10.setText(_translate("self", "3_2"))    # OK
+        self.lineEdit_10.setText(_translate("self", ""))    # OK
         self.label_11.setText(_translate("self", "y"))
-        self.lineEdit_11.setText(_translate("self", "3_3"))    # OK
+        self.lineEdit_11.setText(_translate("self", ""))    # OK
         self.label_12.setText(_translate("self", "z"))
         self.label_13.setText(_translate("self", "="))
-        self.lineEdit_12.setText(_translate("self", "x_3"))
+        self.lineEdit_12.setText(_translate("self", ""))
         self.label_14.setText(_translate(
             "self",
             ""
