@@ -480,31 +480,31 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("self", "Linear system - IVS"))
         self.pushButton.setText(_translate("self", "Calculate"))
-        self.lineEdit_7.setText(_translate("self", ""))
-        self.lineEdit_5.setText(_translate("self", ""))
-        self.lineEdit_6.setText(_translate("self", ""))
+        self.lineEdit_7.setText(_translate("self", "2_3"))    # OK
+        self.lineEdit_5.setText(_translate("self", "2_1"))    # OK
+        self.lineEdit_6.setText(_translate("self", "2_2"))    # OK
         self.label_8.setText(_translate("self", "z"))
         self.label.setText(_translate("self", "Linear system"))
         self.label_2.setText(_translate("self", "="))
         self.label_9.setText(_translate("self", "="))
         self.label_7.setText(_translate("self", "y"))
-        self.lineEdit_4.setText(_translate("self", ""))
-        self.lineEdit_2.setText(_translate("self", ""))
-        self.lineEdit_8.setText(_translate("self", ""))
+        self.lineEdit_4.setText(_translate("self", "x_1"))    # OK
+        self.lineEdit_2.setText(_translate("self", "1_2"))    # OK
+        self.lineEdit_8.setText(_translate("self", "x_2"))    # OK
         self.label_6.setText(_translate("self", "x"))
         self.label_5.setText(_translate("self", "z"))
         self.label_4.setText(_translate("self", "y"))
         self.label_3.setText(_translate("self", "x"))
-        self.lineEdit.setText(_translate("self", ""))
-        self.lineEdit_3.setText(_translate("self", ""))
-        self.lineEdit_9.setText(_translate("self", ""))
+        self.lineEdit.setText(_translate("self", "1_1"))    # OK
+        self.lineEdit_3.setText(_translate("self", "1_3"))    # OK
+        self.lineEdit_9.setText(_translate("self", "3_1"))    # OK
         self.label_10.setText(_translate("self", "x"))
-        self.lineEdit_10.setText(_translate("self", ""))
+        self.lineEdit_10.setText(_translate("self", "3_2"))    # OK
         self.label_11.setText(_translate("self", "y"))
-        self.lineEdit_11.setText(_translate("self", ""))
+        self.lineEdit_11.setText(_translate("self", "3_3"))    # OK
         self.label_12.setText(_translate("self", "z"))
         self.label_13.setText(_translate("self", "="))
-        self.lineEdit_12.setText(_translate("self", ""))
+        self.lineEdit_12.setText(_translate("self", "x_3"))
         self.label_14.setText(_translate(
             "self",
             ""
@@ -515,24 +515,33 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
 
         try:
             firstLin = [
-                int(self.lineEdit_7.text()) if (self.lineEdit_7.text()) else 0,
-                int(self.lineEdit_5.text()) if (self.lineEdit_5.text()) else 0,
-                int(self.lineEdit_6.text()) if (self.lineEdit_6.text()) else 0
+                int(self.lineEdit.text()) if (self.lineEdit.text())
+                else 0,
+                int(self.lineEdit_2.text()) if (self.lineEdit_2.text())
+                else 0,
+                int(self.lineEdit_3.text()) if (self.lineEdit_3.text())
+                else 0
                 ]
             secondLin = [
-                int(self.lineEdit_4.text()) if (self.lineEdit_4.text()) else 0,
-                int(self.lineEdit_2.text()) if (self.lineEdit_2.text()) else 0,
-                int(self.lineEdit_8.text()) if (self.lineEdit_8.text()) else 0
+                int(self.lineEdit_5.text()) if (self.lineEdit_5.text())
+                else 0,
+                int(self.lineEdit_6.text()) if (self.lineEdit_6.text())
+                else 0,
+                int(self.lineEdit_7.text()) if (self.lineEdit_7.text())
+                else 0
             ]
             thirdLin = [
-                int(self.lineEdit.text()) if (self.lineEdit.text()) else 0,
-                int(self.lineEdit_3.text()) if (self.lineEdit_3.text()) else 0,
-                int(self.lineEdit_9.text()) if (self.lineEdit_9.text()) else 0
-            ]
-            rightLin = [
+                int(self.lineEdit_9.text()) if (self.lineEdit_9.text())
+                else 0,
                 int(self.lineEdit_10.text()) if (self.lineEdit_10.text())
                 else 0,
                 int(self.lineEdit_11.text()) if (self.lineEdit_11.text())
+                else 0
+            ]
+            rightLin = [
+                int(self.lineEdit_4.text()) if (self.lineEdit_4.text())
+                else 0,
+                int(self.lineEdit_8.text()) if (self.lineEdit_8.text())
                 else 0,
                 int(self.lineEdit_12.text()) if (self.lineEdit_12.text())
                 else 0
@@ -551,9 +560,9 @@ class Ui_Form_LinearSystem(QtWidgets.QWidget):
             else:
                 self.label_14.setText(_translate(
                     "self",
-                    "x1=" + str(resultLin[0]) + "    " +
-                    "x2=" + str(resultLin[1]) + "    " +
-                    "x3=" + str(resultLin[2])
+                    "x=" + str(resultLin[0]) + "    " +
+                    "y=" + str(resultLin[1]) + "    " +
+                    "z=" + str(resultLin[2])
                     ))
         except:
             self.label_14.setText(_translate(
