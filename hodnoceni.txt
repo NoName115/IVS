@@ -1,4 +1,4 @@
-xkolcu00 100
-xcubae00 100
-xkurak00 100
-xbazik00 100
+xkolcu00 100 (GUI)
+xcubae00 100 (Makefile, testy)
+xkurak00 100 (profiling, matematicka kniznica)
+xbazik00 100 (instalator, dokumentacia)
