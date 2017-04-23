@@ -10,13 +10,15 @@ HERE    	= $(PWD)
 
 default: all
 
-all:
-	python3 -m compileall *.py
+all: *.py
+	python3 -m compileall $^
 
 pack: doc
 	mkdir -p $(REPODIR)
 	cp -ar ../* $(REPODIR)
 	cp -r $(DOCDIR) $(TEMPDIR)/doc
+	rm -rf $(REPODIR)/doc
+	make -C $(REPODIR)/src clean
 	cd $(TEMPDIR) && zip -qr $(HERE)/xbazik00_xcubae00_xkolcu00_xkurak00.zip ./*
 	rm -rf $(TEMPDIR)
 
@@ -37,7 +39,7 @@ doc:
 	$(SPHINXBUILD) "$(SOURCEDIR)" "$(DOCDIR)"
 
 run:
-	python3 gui.py
+	python3 ivs-calculator
 
 pep:
 	pep8 *.py
