@@ -13,3 +13,4 @@ setup(name='ivs-calculator',
       include_package_data=True,
       scripts=['src/ivs-calculator']
 )
+
